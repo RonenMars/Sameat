@@ -21,15 +21,17 @@ public class Course {
     private String imgLink;
     private float rating;
 
-    public Course(String cID, String cName, int cPrice, String imgLink, float rating) {
+    public Course(String cID, String cName, int cPrice, String imgLink, float rating, List< Ingredient >  ingredients ) {
         this.cID = cID;
         this.cName = cName;
         this.cPrice = cPrice;
         this.imgLink = imgLink;
         this.rating = rating;
+        this.ingredients = ingredients;
     }
 
-    
+
+  
     /**
      * @return the cID
      */
