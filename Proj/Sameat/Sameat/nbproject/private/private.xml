@@ -3,22 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/UsersDB.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/META-INF/context.xml</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/thanks.jsp</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/controllers/NewUser.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/login.jsp</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/DBUtil.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/reg.jsp</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/success.jsp</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/ConnectionPool.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/util/CheckData.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/controllers/Login.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/business/User.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/util/PasswordUtil.java</file>
-            <file>file:/C:/Users/matan_naman/Desktop/Java%20Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/UserDB.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/controllers/UpdateUser.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/DBUtil.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/util/CheckData.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/UserDB.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/web/update.jsp</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/controllers/NewUser.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/data/UsersDB.java</file>
+            <file>file:/C:/Users/userty5/Desktop/לימודים/Restaurant%20project/Project/Sameat/Proj/Sameat/Sameat/src/java/sameat/controllers/Login.java</file>
         </group>
     </open-files>
 </project-private>
