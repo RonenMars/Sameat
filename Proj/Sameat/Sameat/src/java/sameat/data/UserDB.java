@@ -72,5 +72,34 @@ public class UserDB {
         }
         
     }
+        
+            
+    public ResultSet getAllUsers() 
+    {        
+        ConnectionPool pool=ConnectionPool.getInstance();
+        Connection connection=pool.getConnection();
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        
+        String query="{call GetAllUsers()}";
+        
+        try {            
+            ps=connection.prepareStatement(query);
+            rs=ps.executeQuery();
+            if(rs!=null) {
+                return rs;
+                
+            }
+            else
+                return null;
+        } catch(SQLException ex) {
+            System.err.println(ex);
+            return null;
+        } finally {
+            DBUtil.closeResultSet(rs);
+            DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
+        }
+    }
             
 }

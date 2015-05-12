@@ -4,7 +4,8 @@
     Author     : College
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.ResultSet" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,6 +33,7 @@
           <div id="loginheading">
             <h4>התחברות משתמש</h4>
           </div>
+        <form action="AllUsers" method="POST">
           <div id="username">שם משתמש:</div>
           <div id="input">
             <label>
@@ -44,8 +46,9 @@
               <input name="textfield2" type="password" class="input" id="textfield2" value="password" />
             </label>
           </div>
-          <div id="loginbutton"><a href="#" class="login">התחבר</a></div>
+          <div id="loginbutton"><input name="login" type="submit" class="login" value="התחבר" /></div>
           <div id="register"><a href="#" class="register">הירשם כעת</a></div>
+        </form>
         </div>
       </div>
     </div>
@@ -105,46 +108,23 @@
       </div>
       <div id="contentmid">
         <div class="midheading">
-          <h2>משימות אחראי משמרת</h2>
+          <h2>ניהול</h2>
         </div>
-        <!--
-		<div class="midtxt"><span class="midboldtxt">Nulla eget lacus ac duidictum ellentesque dapibus nibh ornare</span><br />
-          volutpat, diam leo vestibulum lectus, eu molestie elit est eu ipsum. Ut accumsan nisl eu velit. Morbi eros felis, ornare sed, vestibulum cursus, vehicula et, nisl. Etiam adipiscing. </div>
-        <div id="comments">
-          <div id="addcomments"><a href="#" class="addcomments">Add Commend</a></div>
-          <div id="morecomments"><a href="#" class="morecomments">read more</a></div>
-        </div>
-        <div class="midheading">
-          <h2>Latest Projects<span class="projectheading">Wednesday, May 07, 2008</span></h2>
-        </div>
-        <div id="projectbg">
-          <div id="projectthumnail"></div>
-          <div id="projecttxtblank">
-            <div id="projecttxt"><span class="projectboldtxt">Nulla venenati sed varius an teproin</span> libero aecenas dapibus am gravida ante quis arcu liquam eleifend. Donec at elit. Integer lectus dolor utrum a volutpat .<br />
-            </div>
-            <div id="moreproject"><a href="#" class="moreproject">read more</a></div>
-          </div>
-        </div>
-        <div class="midheading">
           <h2>Our main purpose</h2>
+        <div id="purposetxt">
+        <table>
+            <c:forEach items="${rs}" var="item">
+                <tr>
+                    <td>${item.property1}</td>
+                    <td>${item.property2}</td>
+                </tr>
+            </c:forEach>
+        </table>
         </div>
-        <div id="purposetxt">Donec posuere bibendum erat. Etiam commodo consectetuer tellus. Ut ut tellus eget nisl fermentum egestas. Ut consequat, </div>
-        <div id="purposenav">
-          <ul>
-            <li><a href="#" class="purposenav">Conubia nostra per inceptos</a></li>
-            <li><a href="#" class="purposenav">Etiam porta ullam sodales libe</a></li>
-          </ul>
-          <ul>
-            <li><a href="#" class="purposenav">Lobortis ac mauris mauris</a></li>
-            <li><a href="#" class="purposenav">Sed varius ante roin sed ped</a></li>
-          </ul>
-        </div>
-        <div class="midtxt"><span class="midboldtxt">Morbi porta odio id erat. Curabitur ut massa uspendisse ipsum. In vitae dolor eget lorem</span> Suspendisse massa lacus, ullamcorper ac, pulvinar ut, aliquet et, elit. </div>
-		-->
       </div>
       <div id="contentright">
         <div class="rightheading">
-          <h4>ניהול</h4>
+          <h4>משימות אחראי</h4>
         </div>
         <!--
 		<div id="galleryblank">
