@@ -5,6 +5,8 @@
 --%>
 
 <%@page import="java.sql.ResultSet" %>
+<%@page import="java.io.*" %>
+<%@page import="java.net.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -110,16 +112,15 @@
         <div class="midheading">
           <h2>ניהול</h2>
         </div>
-          <h2>Our main purpose</h2>
         <div id="purposetxt">
-        <table>
-            <c:forEach items="${rs}" var="item">
-                <tr>
-                    <td>${item.property1}</td>
-                    <td>${item.property2}</td>
-                </tr>
-            </c:forEach>
-        </table>
+        <form id="my_form" action="AllUsers" method="POST">
+            <input type="submit" value="Login" name="log" />
+        </form>
+        <%= request.getContextPath() %><br/>
+        <%= request.getRequestURI() %><br/>
+        <%= request.getRequestURL() %><br/>
+        <b>${Message}</b>
+
         </div>
       </div>
       <div id="contentright">

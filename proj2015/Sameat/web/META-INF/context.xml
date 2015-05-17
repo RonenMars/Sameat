@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Sameat">
-
-    <Resource name="jdbc/sameatDB" type="javax.sql.DataSource" auth="Container"
-        driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://light-era.net:3307/rfwuryzg_sameatDB?noAccessToProcedureBodies=true&amp;autoReconnect=true"
-        username="rfwuryzg_samUN" password="xVt2TByc7"
-        logAbandoned="true" 
-        removeAbandoned="true" removeAbandonedTimeout="60" 
-         maxActive="100" maxIdle="30" maxWait="10000" />
+<Context path="/SameatNew">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/sameatDB" password="xVt2TByc7" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:mysql://light-era.net:3307/rfwuryzg_sameatDB?noAccessToProcedureBodies=true&amp;autoReconnect=true" username="rfwuryzg_samUN"/>
 </Context>
- 

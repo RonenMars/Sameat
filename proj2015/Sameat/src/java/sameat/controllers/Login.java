@@ -118,8 +118,7 @@ public class Login extends HttpServlet {
                String url="/login.jsp";
                String Message="One or more of the values is wrong , try again!";
                request.setAttribute("Message", Message);
-               this.getServletContext().getRequestDispatcher(url).forward(request, response);
-               
+               this.getServletContext().getRequestDispatcher(url).forward(request, response);               
            }
            
            //StandaloneApp -- Type 2 || MobileApp -- Type 3

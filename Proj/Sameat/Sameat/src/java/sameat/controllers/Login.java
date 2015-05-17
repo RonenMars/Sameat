@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
        String userid=request.getParameter("id");
        String password=request.getParameter("password");
        String appType=request.getParameter("appType");
-       
+
        //CheckData -- Check for empty strings
        if(username.isEmpty() || userid.isEmpty() || password.isEmpty() ) {
            
@@ -75,7 +75,7 @@ public class Login extends HttpServlet {
            }
            
        }
-       int result=cd.checkLogin(username, userid, password);
+       int result=cd.checkLogin(username, userid, password); //Push Ctrl+Shift+B
        /*Success Login to the system*/
        if(result==1) {
            
