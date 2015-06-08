@@ -30,14 +30,13 @@ public class ProductsDB {
      
          try {
 
-            cs=connection.prepareCall("{call insertProduct(?,?,?,?,?)}"); 
+            cs=connection.prepareCall("{call insertProduct(?,?,?,?)}"); 
             cs.setString(1,product.getProductName());
-            cs.setFloat(2, Float.parseFloat(product.getPricePer100g()));
-            cs.setFloat(3, Float.parseFloat(product.getPricePerUnit()));
-            cs.setInt(4, Integer.parseInt(product.getAmoutOfProduct()));
-            cs.registerOutParameter(5, Types.INTEGER);
+            cs.setFloat(2, Float.parseFloat(product.getPricePerUnit()));
+            cs.setInt(3, Integer.parseInt(product.getAmoutOfProduct()));
+            cs.registerOutParameter(4, Types.INTEGER);
             cs.executeUpdate();
-            return cs.getInt(5);
+            return cs.getInt(4);
                
         } catch(SQLException ex) {
              out.print(ex.getMessage());
@@ -66,7 +65,7 @@ public class ProductsDB {
 
              while(rs.next()) {
                 
-                products.add(new Products(rs.getString("Name"),rs.getString("PricePer100gr"),rs.getString("priceperunit"),rs.getString("Inventory"),rs.getString("IsActive")));
+                products.add(new Products(rs.getString("Name"),rs.getString("Price"),rs.getString("Inventory"),rs.getString("IsActive")));
             }
             
              Gson jObj=new Gson();
@@ -98,14 +97,13 @@ public class ProductsDB {
      
          try {
 
-            cs=connection.prepareCall("{call UpdateProduct(?,?,?,?,?)}"); 
+            cs=connection.prepareCall("{call UpdateProduct(?,?,?,?)}"); 
             cs.setString(1,product.getProductName());
-            cs.setFloat(2, Float.parseFloat(product.getPricePer100g()));
-            cs.setFloat(3, Float.parseFloat(product.getPricePerUnit()));
-            cs.setInt(4, Integer.parseInt(product.getAmoutOfProduct()));
-            cs.registerOutParameter(5, Types.INTEGER);
+            cs.setFloat(2, Float.parseFloat(product.getPricePerUnit()));
+            cs.setInt(3, Integer.parseInt(product.getAmoutOfProduct()));
+            cs.registerOutParameter(4, Types.INTEGER);
             cs.executeUpdate();
-            return cs.getInt(5);
+            return cs.getInt(4);
                
         } catch(SQLException ex) {
              out.print(ex.getMessage());

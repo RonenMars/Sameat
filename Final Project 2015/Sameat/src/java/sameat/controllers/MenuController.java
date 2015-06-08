@@ -108,24 +108,11 @@ public class MenuController extends HttpServlet {
     }
     
      private void AllCourses(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        HttpSession session=request.getSession(false);
-       
-        String url;
-        
-        if(session==null) {
-            url="/admin/adminIndex.jsp";
-        } else if(session.getAttribute("user")==null)
-        {
-            url="/admin/adminIndex.jsp"; //TODO
-        } else {
-             url="/foodmenu/catalog.jsp"; //TODO
-        }
-        
-        ArrayList<Course> courses=CourseDB.GetAllCourses();  //ChangeBack      
+
+        ArrayList<Course> courses=CourseDB.GetAllCourses();       
         
         request.setAttribute("courses", courses);
-        this.getServletContext().getRequestDispatcher(url).forward(request, response);   
+        this.getServletContext().getRequestDispatcher("/admin/index.jsp").forward(request, response);   
     }    
     
     

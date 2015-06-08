@@ -38,9 +38,9 @@ public class CourseSDB {
         
          try {
              
-            cs=connection.prepareCall("{call GetAllCourse()}");
+            cs=connection.prepareCall("{call GetAllCourses ()}");
             rs=cs.executeQuery();
-            List <CourseSa> courses = new ArrayList<CourseSa>();
+            List <CourseSa> courses = new ArrayList<>();
 
              while(rs.next()) {
                 

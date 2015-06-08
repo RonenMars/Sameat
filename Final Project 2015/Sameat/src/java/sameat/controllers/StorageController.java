@@ -80,11 +80,10 @@ public class StorageController extends HttpServlet {
     private void newIngredient(HttpServletRequest request, HttpServletResponse response) {
         PrintWriter out = null;
         try {
-            String name = request.getParameter("ProductName");
+           
             out = response.getWriter();
             Products product = new Products();
             product.setProductName(request.getParameter("ProductName"));
-            product.setPricePer100g(request.getParameter("price1"));
             product.setPricePerUnit((request.getParameter("price2")));
             product.setAmoutOfProduct((request.getParameter("Amount")));
             int result = ProductsDB.insertProduct(product, response);
@@ -122,8 +121,7 @@ public class StorageController extends HttpServlet {
             out = response.getWriter();
             Products product = new Products();
             product.setProductName(request.getParameter("ProductName"));
-            product.setPricePer100g(request.getParameter("price1"));
-            product.setPricePerUnit((request.getParameter("price2")));
+            product.setPricePerUnit(request.getParameter("price2"));
             product.setAmoutOfProduct((request.getParameter("Amount")));
             int result = ProductsDB.UpdateProduct(product, response);
             if (result == 1) {

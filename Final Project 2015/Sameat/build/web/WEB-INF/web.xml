@@ -6,6 +6,10 @@
 	 version="3.1">  
     
     <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>sameat.controllers.AdminController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>UserController</servlet-name>
         <servlet-class>sameat.controllers.UserController</servlet-class>
     </servlet>
@@ -20,7 +24,12 @@
     <servlet>
         <servlet-name>ReportsController</servlet-name>
         <servlet-class>sameat.controllers.ReportsController</servlet-class>
-    </servlet>     
+    </servlet>    
+    
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/exit</url-pattern>
+    </servlet-mapping> 
         
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
@@ -28,12 +37,12 @@
         <url-pattern>/customer/profile</url-pattern>
         <url-pattern>/login/*</url-pattern>
         <url-pattern>/main/new</url-pattern>
-        <url-pattern>/admin/customers</url-pattern>
+        <url-pattern>/customers</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MenuController</servlet-name>
         <url-pattern>/menu/*</url-pattern>
-         <url-pattern>/admin/courses</url-pattern>
+         <url-pattern>/courses</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OrderController</servlet-name>
@@ -42,13 +51,14 @@
         <url-pattern>/order/complete</url-pattern>
         <url-pattern>/order/rate</url-pattern>
         <url-pattern>/order/completeMobile</url-pattern>
+        <url-pattern>/orders</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ReportsController</servlet-name>
-        <url-pattern>/admin/reports/*</url-pattern>
-        <url-pattern>/admin/reports/popular-courses</url-pattern>
-        <url-pattern>/admin/reports/strong-customers</url-pattern>
-        <url-pattern>/admin/reports/weakest-customers</url-pattern>
+        <url-pattern>/reports/*</url-pattern>
+        <url-pattern>/reports/popular-courses</url-pattern>
+        <url-pattern>/reports/strong-customers</url-pattern>
+        <url-pattern>/reports/weakest-customers</url-pattern>
     </servlet-mapping>
    
     

@@ -83,7 +83,7 @@ public class OrderController extends HttpServlet {
              rateCourse(request , response);
          } else if(requestURI.endsWith("/completeMobile")) {
              completeMobOrder(request , response);
-         } else if(requestURI.endsWith("/admin/orders")) {
+         } else if(requestURI.endsWith("/orders")) {
              GetOrders(request , response); 
          }
     }
@@ -96,10 +96,10 @@ public class OrderController extends HttpServlet {
         String message="You must to register to the site before you can add items to cart and make order!";
 
         if(session==null){
-            url="/join.jsp";
+            url="/un_join.jsp";
             request.setAttribute("message", message);
         } else if(session.getAttribute("user")==null) {
-            url="/join.jsp";
+            url="/un_join.jsp";
             request.setAttribute("message", message);
         } else {
             Cart cart;
@@ -128,10 +128,10 @@ public class OrderController extends HttpServlet {
         String message="You must register to the site before you can be able to order and see your orders history!";
         
         if(session==null) {
-            url="/join.jsp";
+            url="/un_join.jsp";
             request.setAttribute("message", message);
         } else if(session.getAttribute("user")==null) {
-            url="/join.jsp";
+            url="/un_join.jsp";
             request.setAttribute("message", message);
         } else {
             User user=(User)session.getAttribute("user");

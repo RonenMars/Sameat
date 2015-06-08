@@ -6,17 +6,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sameat - Online Restaurant!</title>
-        <link rel="stylesheet" href="<c:url value='/css/bootstrap.min.css'/> ">
-        <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
-        <script type='text/javascript' src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+        <script type='text/javascript' src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
         
         <%-- Date Picker Adds--%>
         
-        <script type='text/javascript' src="js/moment.min.js"></script>
-        <script type='text/javascript' src="js/daterangepicker.js"></script>
-        <link rel="stylesheet" type='text/css' href="css/daterangepicker-bs3.css">
+        <script type='text/javascript' src="<%=request.getContextPath()%>/js/moment.min.js"></script>
+        <script type='text/javascript' src="<%=request.getContextPath()%>/js/daterangepicker.js"></script>
+        <link rel="stylesheet" type='text/css' href="<%=request.getContextPath()%>/css/daterangepicker-bs3.css">
           
-        <script type='text/javascript' src='js/Joinvalidation.js'></script>
+        <script type='text/javascript' src='<%=request.getContextPath()%>/js/Joinvalidation.js'></script>
         <script type='text/javascript'>
             $(function(){
                 $('input[name="userBDay"]').daterangepicker({

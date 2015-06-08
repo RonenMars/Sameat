@@ -25,11 +25,11 @@
       <div id="menu">
         <ul>
           <li><a href="${pageContext.request.requestURL}" class="menu">Home</a></li>
-          <li><a href="<%=request.getContextPath()%>/admin/customers" class="menu">Customers</a></li>
-          <li><a href="<%=request.getContextPath()%>/admin/courses" class="menu">Courses</a></li>
-          <li><a href="<%=request.getContextPath()%>/admin/orders" class="menu">Orders</a></li>
+          <li><a href="<%=request.getContextPath()%>/customers" class="menu">Customers</a></li>
+          <li><a href="<%=request.getContextPath()%>/courses" class="menu">Courses</a></li>
+          <li><a href="<%=request.getContextPath()%>/orders" class="menu">Orders</a></li>
           <li><a href="${pageContext.request.requestURL}?display=reports"class="menu">Reports</a></li>
-          <li><a href="${pageContext.request.requestURL}?display=logout" class="menu">Logout</a></li>
+          <li><a href="<%=request.getContextPath()%>/exit" class="menu">Logout</a></li>
         </ul>
       </div>
       </div>
@@ -156,7 +156,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="<%=request.getContextPath()%>/admin/reports/balance" class="menu">Balance</a></td>
+                                <td><a href="<%=request.getContextPath()%>/reports/balance" class="menu">Balance</a></td>
                             </tr>
                             <tr>
                                 <td>
@@ -167,7 +167,7 @@
                     </table>
                 </div> 
             </c:when> 
-            <c:when test="${balance != null and not fn:endsWith(pageContext.request.requestURI, '/admin/reports/balance')}">
+            <c:when test="${balance != null and not fn:endsWith(pageContext.request.requestURI, '/reports/balance')}">
                 <div class="midheading">
                   <h2>Balance report</h2>
                 </div>
@@ -260,20 +260,19 @@
             <div class="footertxt">
                 <br/>
             </div>
-            <div class="footerbutton"><a href="<%=request.getContextPath()%>/admin/reports/popular-courses" class="button">Click here</a></div>
+            <div class="footerbutton"><a href="<%=request.getContextPath()%>/reports/popular-courses" class="button">Click here</a></div>
         </div>
       <div id="footermid"><div class="footerheading"><h4>Strongest customers</h4></div>
       <div class="footertxt"><br/></div>
-      <div class="footerbutton"><a href="<%=request.getContextPath()%>/admin/reports/strong-customers" class="button">Click here</a></div>
+      <div class="footerbutton"><a href="<%=request.getContextPath()%>/reports/strong-customers" class="button">Click here</a></div>
       </div>
       <div id="footerlast">
         <div class="footerheading">
           <h4>Weakest<br/> customers</h4>
         </div>
           <div class="footertxt"><br/></div>
-        <div class="footerbutton"><a href="<%=request.getContextPath()%>/admin/reports/weakest-customers" class="button">Click here</a></div>
+        <div class="footerbutton"><a href="<%=request.getContextPath()%>/reports/weakest-customers" class="button">Click here</a></div>
       </div>
-      <div id="footerlinks"><a href="#" class="footerlinks">Home</a> | <a href="#" class="footerlinks">About Us</a> | <a href="#" class="footerlinks">Support</a> | <a href="#" class="footerlinks">Forum</a> | <a href="#" class="footerlinks">Development</a> | <a href="#" class="footerlinks">Conact Us</a></div>
       <div id="copyrights">© Sameat 2012-2015</div>
     </div>
   </div>

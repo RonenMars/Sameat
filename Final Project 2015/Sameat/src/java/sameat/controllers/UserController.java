@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -69,10 +70,10 @@ public class UserController extends HttpServlet {
             String message="you must be a registered user to view your profile!";
             if(session==null) {
                 request.setAttribute("message", message);
-                this.getServletContext().getRequestDispatcher("/join.jsp").forward(request, response);
+                this.getServletContext().getRequestDispatcher("/un_join.jsp").forward(request, response);
             } else if(session.getAttribute("user")==null) {
                 request.setAttribute("message", message );
-                this.getServletContext().getRequestDispatcher("/join.jsp").forward(request, response);
+                this.getServletContext().getRequestDispatcher("/un_join.jsp").forward(request, response);
             } else {
                 this.getServletContext().getRequestDispatcher("/client/profile.jsp").forward(request, response);
             }
@@ -95,6 +96,8 @@ public class UserController extends HttpServlet {
             }
         } else if(requestURI.endsWith("/contact")) {
             contactUs(request , response);
+        } else if(requestURI.endsWith("/customers")) {
+            GetCustomers(request , response);
         }
         
     }
@@ -277,5 +280,13 @@ public class UserController extends HttpServlet {
         }
         
         this.getServletContext().getRequestDispatcher("/contactus.jsp").forward(request, response);
+    }
+
+    private void GetCustomers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        ArrayList<User> customers = UsersDB.GetAllCustomers();     
+        
+        request.setAttribute("customers", customers);
+        this.getServletContext().getRequestDispatcher("/admin/index.jsp").forward(request, response);   
     }
 }

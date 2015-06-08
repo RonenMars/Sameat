@@ -16,9 +16,8 @@ import java.util.HashMap;
 
 public class Products implements Serializable {
 
-    public Products(String ProductName, String pricePer100g, String pricePerUnit, String AmoutOfProduct, String IsInMenu) {
+    public Products(String ProductName, String pricePerUnit, String AmoutOfProduct, String IsInMenu) {
         this.ProductName = ProductName;
-        this.pricePer100g = pricePer100g;
         this.pricePerUnit = pricePerUnit;
         this.AmoutOfProduct = AmoutOfProduct;
         this.IsInMenu = IsInMenu;
@@ -32,7 +31,6 @@ public class Products implements Serializable {
         this.IsInMenu = IsInMenu;
     }
     private String ProductName;
-    private String pricePer100g;
     private String pricePerUnit;
     private String AmoutOfProduct;
      private String IsInMenu;
@@ -58,16 +56,8 @@ public class Products implements Serializable {
     /**
      * @return the pricePer100g
      */
-    public String getPricePer100g() {
-        return pricePer100g;
-    }
 
     /**
-     * @param pricePer100g the pricePer100g to set
-     */
-    public void setPricePer100g(String pricePer100g) {
-        this.pricePer100g = pricePer100g;
-    }
 
     /**
      * @return the pricePerUnit
